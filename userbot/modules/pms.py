@@ -47,8 +47,8 @@ async def permitpm(event):
             apprv = is_approved(event.chat_id)
             notifsoff = gvarstatus("NOTIF_OFF")
 
-         warns = COUNT_PM[event.chat_id] + 1
-         UNAPPROVED_MSG = (
+            warns = COUNT_PM[event.chat_id] + 1
+            UNAPPROVED_MSG = (
                            "`HeY! Please don't spam. Wait for my master's approval 🙃\nYou have {warns}/4 warns \n\n`")
 
             # This part basically is a sanity check
