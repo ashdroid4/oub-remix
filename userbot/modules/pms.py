@@ -24,12 +24,9 @@ from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID, PM_AUTO_BAN,
 
 from userbot.events import register
 
-warn = COUNT_PM[event.chat_id] + 1
-totalwarn = 4
-
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`HeY! Please don't spam. Wait for my master's approval 🙃\nYou have {warn}/{totalwarn} warns \n\n`")
+    "`HeY! Please don't spam. Wait for my master's approval 🙃\nYou have {COUNT_PM[event.chat_id] + 1}/4 warns \n\n`")
 # =================================================================
 
 NO_PM_LOG_USERS = []
