@@ -25,10 +25,7 @@ from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID, PM_AUTO_BAN,
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
-COUNT_PM = {}
-warns = COUNT_PM[chat_id] + 1
-UNAPPROVED_MSG = (
-    "`HeY! Please don't spam. Wait for my master's approval 🙃\nYou have {warns}/4 warns \n\n`")
+
 # =================================================================
 
 NO_PM_LOG_USERS = []
@@ -49,6 +46,10 @@ async def permitpm(event):
                 return
             apprv = is_approved(event.chat_id)
             notifsoff = gvarstatus("NOTIF_OFF")
+
+         warns = COUNT_PM[event.chat_id] + 1
+         UNAPPROVED_MSG = (
+                           "`HeY! Please don't spam. Wait for my master's approval 🙃\nYou have {warns}/4 warns \n\n`")
 
             # This part basically is a sanity check
             # If the message that sent before is Unapproved Message
